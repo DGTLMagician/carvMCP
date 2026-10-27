@@ -1,0 +1,5 @@
+* text=auto eol=lf
+
+# Generated from the Carv app by tools/schema/gen.py
+src/carv_mcp/schema.json linguist-generated=true -diff
+uv.lock linguist-generated=true

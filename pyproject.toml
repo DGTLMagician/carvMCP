@@ -1,0 +1,18 @@
+[project]
+name = "carv-mcp"
+version = "0.1.0"
+description = "MCP server die je Carv ski-data beschikbaar maakt in Claude Desktop"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "grpcio>=1.85.0",
+    "mcp>=2.3.0",
+    "zstandard>=0.25.0",
+]
+
+[project.scripts]
+carv-mcp = "carv_mcp.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,31 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Tools / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Local data: never commit sessions, app binaries or credentials
+*.pb
+*.zstd
+*.apk
+*.so
+syms.txt
+carv.json
+listing.json
+index.json
+.env
+
+# Intermediate output of tools/schema
+tools/schema/schema.json
+tools/schema/sertypes.json
+tools/schema/enums.json
