@@ -107,3 +107,9 @@ int-veld bij welke enum hoort, staat niet in de binary. Die koppeling is op veld
 Opnieuw genereren na een Carv-update: zet `libandroid.so` uit de arm64-split-APK in
 `tools/schema/`, maak `syms.txt` met `nm -C libandroid.so > syms.txt`, installeer `unicorn` en
 draai `crawl.py`, `sertypes.py`, `enums.py` en `gen.py`.
+
+[`pbandk.py`](tools/schema/pbandk.py) haalt de view models van de app (`ui.*`, met veldnamen, tags
+en enums) uit de pbandk-descriptors in de gedecompileerde Kotlin-code;
+[`uidoc.py`](tools/schema/uidoc.py) maakt daar een Markdown-referentie van.
+[`debugnames.py`](tools/schema/debugnames.py) haalt veldnamen uit de Debug-implementaties in de
+Rust-library, voor berichten die de app alleen encodeert.

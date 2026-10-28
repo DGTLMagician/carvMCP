@@ -29,3 +29,9 @@ index.json
 tools/schema/schema.json
 tools/schema/sertypes.json
 tools/schema/enums.json
+
+# Carv APKs and extracted library (see tools/schema)
+tools/schema/app/
+
+# Local exports (e.g. the web UI brief), not part of this project
+export/
