@@ -264,7 +264,8 @@ def turn_row(t: dict, i: int, run: int | None, off: int) -> dict:
         "turn": i,
         "run": run,
         "time": local(t.get("start_time"), off),
-        "direction": {1: "left", 2: "right"}.get(t.get("direction"), t.get("direction")),
+        # 0 (omitted, proto3 default) = left, 1 = right; checked against the GPS heading change.
+        "direction": {0: "left", 1: "right"}.get(t.get("direction", 0), t.get("direction")),
         "turn_type": t.get("turn_type_final_2608") or t.get("turn_type_2507"),
         "duration_s": t.get("duration"),
         "turn_radius_m": t.get("turn_radius"),
